@@ -113,3 +113,27 @@ inflation_adjust_cost <- function(from_year,
   
   return(to_cost)
 }
+
+#'@param from_year base year to inflate from
+#'@param to_year destination year to inflate to
+#'@param from_cost base year cost 
+#'@inflation_df dataframe of annual inflation data, in the format
+#'"year" = year (yyyy) ¦ "rate" = annual inflation rate (1/100th fraction)
+#'@examples 
+#'inflation_df <- data.frame("year" = 2008:2010, "rate"=c(0.02, 0.03, 0.025))
+#'inflation_adjust_cost_custom(2008,2009,100,inflation_df)
+#'Result: 100*1.02 = 102 
+inflation_adjust_cost_custom <- function(from_year,
+                                         to_year,
+                                         from_cost,
+                                         inflation_df) {
+  
+  return_cost <- from_cost
+  
+  for (i in from_year:(to_year-1)) {
+    rate <- inflation_df[which(inflation_df$year==2008),"rate"]
+    return_cost <- return_cost * (1+rate)
+  }
+  
+ return_cost
+}
