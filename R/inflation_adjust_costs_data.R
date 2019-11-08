@@ -7,7 +7,8 @@
 #' Option to use the following datasets:
 #'
 #' \itemize{
-#'   \item \href{https://www.pssru.ac.uk/pub/uc/uc2017/sources-of-information.pdf}{PSSRU annual inflation hospital and community health services (HCHS)}
+#'   \item \href{https://www.pssru.ac.uk/pub/uc/uc2017/sources-of-information.pdf}{PSSRU annual inflation hospital and community health services (HCHS)} \code{\link{HCHS}}
+#'   \item \link{CPI}
 #' }
 #'
 #' \deqn{(1 + i_{1})(1 + i_{2}) \cdots (1 + i_{n}) \times C}
@@ -18,7 +19,7 @@
 #' @param from_year Date of cost to convert from
 #' @param to_year Date to convert cost to
 #' @param from_cost Cost at \code{from_year}
-#' @param inflation_data NA default is fixed 3.5\% rate of inflation; otherwise source of data (string) \code{\link{GDP_deflators}}, \code{\link{HCHS_pay}}, \code{\link{{HCHS_price}} or \code{\link{CPI}}.
+#' @param inflation_data_nm source of data (string) \code{\link{HCHS}}, \code{\link{CPI}}.
 #'
 #' @return Inflated (to) cost (scalar), with attributes used to generate the return value:
 #' \itemize{
@@ -54,19 +55,21 @@ inflation_adjust_cost_data <- function(from_year,
   if (to_year %% 1 != 0) stop("To date must be an integer valued whole year")
   if (from_cost < 0) stop("Cost must be non-negative")
   
-  # from csv?
-  # data_sources <- dir(system.file("extdata", package = "inflately"))
-  # RData in \data?
-  data_sources <- data(package = "inflately")
-  data_sources <- data_sources$results[, "Item"]
+  # from csv
+  data_sources <- dir(system.file("extdata", package = "inflately"))
+  data_file_nm <- sprintf("%s.csv", inflation_df_nm)
+  
+  ## RData in \data?
+  # data_sources <- data(package = "inflately")
+  # data_sources <- data_sources$results[, "Item"]
 
   
-  if (!(inflation_df_nm %in% data_sources)) {
+  if (!(data_file_nm %in% data_sources)) {
     
     stop("inflation_data name not available")
   }
 
-  inflation_df <- read.csv(system.file("extdata", "HCHS.csv",
+  inflation_df <- read.csv(system.file("extdata", data_file_nm,
                                        package = "inflately"))
   
   ## cant workout how to use RData data
