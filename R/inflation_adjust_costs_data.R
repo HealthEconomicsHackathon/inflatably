@@ -50,11 +50,6 @@ inflation_adjust_cost_data <- function(from_year,
                                        to_year,
                                        from_cost,
                                        inflation_df_nm){
-  
-  if (from_year %% 1 != 0) stop("From date must be an integer valued whole year")
-  if (to_year %% 1 != 0) stop("To date must be an integer valued whole year")
-  if (from_cost < 0) stop("Cost must be non-negative")
-  
   # from csv
   data_sources <- dir(system.file("extdata", package = "inflately"))
   data_file_nm <- sprintf("%s.csv", inflation_df_nm)
