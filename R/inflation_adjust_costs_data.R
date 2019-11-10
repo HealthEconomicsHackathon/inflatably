@@ -51,29 +51,22 @@ inflation_adjust_cost_data <- function(from_year,
                                        inflation_df_nm){
   
   if (from_year %% 1 != 0) stop("From date must be an integer valued whole year")
-  if (to_year %% 1 != 0) stop("To date must be an integer valued whole year")
+  if (to_year %% 1 != 0) stop("To date must be an integer valued whole year") 
   if (from_cost < 0) stop("Cost must be non-negative")
   
-  # from csv?
-  # data_sources <- dir(system.file("extdata", package = "inflately"))
-  # RData in \data?
   data_sources <- data(package = "inflately")
-  data_sources <- data_sources$results[, "Item"]
-
+  data_sources <- data_sources$results[ ,"Item"]
   
   if (!(inflation_df_nm %in% data_sources)) {
     
     stop("inflation_data name not available")
   }
 
-  inflation_df <- read.csv(system.file("extdata", "HCHS.csv",
-                                       package = "inflately"))
+  # load data to workspace
+  eval(parse(text = paste0("data(", inflation_df_nm, ")")))
+  inflation_df <- eval(parse(text = inflation_df_nm))
   
-  ## cant workout how to use RData data
-  ## eval(paste())?
-  # inflation_df <- load(data_sources, file = "data/HCHS.RData")
-  # data(HCHS)klkkipploklklk7lllkj
-  jdiogjnasph-uiqyr784qut9=to_cost <- 
+  to_cost <- 
     inflation_adjust_cost_custom(from_year,
                                  to_year,
                                  from_cost,
