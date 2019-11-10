@@ -22,3 +22,4 @@ devtools::install_github("HealthEconomicsHackathon/inflatably")
 Inflating costs to present value (PV) is a routine step in
 cost-effectiveness analyses. Further, there are different inflation
 rates depending on the type of cost to be inflated.
+
