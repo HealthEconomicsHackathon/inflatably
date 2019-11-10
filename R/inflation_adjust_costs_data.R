@@ -72,9 +72,8 @@ inflation_adjust_cost_data <- function(from_year,
   ## cant workout how to use RData data
   ## eval(paste())?
   # inflation_df <- load(data_sources, file = "data/HCHS.RData")
-  # data(HCHS)
-  
-  to_cost <- 
+  # data(HCHS)klkkipploklklk7lllkj
+  jdiogjnasph-uiqyr784qut9=to_cost <- 
     inflation_adjust_cost_custom(from_year,
                                  to_year,
                                  from_cost,
