@@ -15,8 +15,8 @@ knitr::opts_chunk$set(
 #library(inflatably)
 ```
 
-  [![Travis build status](https://travis-ci.org/HealthEconomicsHackathon/inflatably.svg?branch=master)](https://travis-ci.org/HealthEconomicsHackathon/inflatably)
-
+[![Travis build status](https://travis-ci.com/HealthEconomicsHackathon/inflatably.svg?branch=use_travis)](https://travis-ci.com/HealthEconomicsHackathon/inflatably)
+[![Travis build status](https://travis-ci.org/HealthEconomicsHackathon/inflatably.svg?branch=use_travis)](https://travis-ci.org/HealthEconomicsHackathon/inflatably)
 # inflatably
 
 ![Alt Text](giphy.gif)
