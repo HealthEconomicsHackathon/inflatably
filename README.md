@@ -2,13 +2,14 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 [![Travis build
-status](https://travis-ci.org/HealthEconomicsHackathon/inflatably.svg?branch=master)](https://travis-ci.org/HealthEconomicsHackathon/inflatably)
+status](https://travis-ci.org/HealthEconomicsHackathon/inflatably.svg?branch=use_travis)](https://travis-ci.org/HealthEconomicsHackathon/inflatably)
+[![codecov.io](https://codecov.io/github/HealthEconomicsHackathon/inflatably/coverage.svg?branch=master)](https://codecov.io/github/HealthEconomicsHackathon/inflatably?branch=master)
 
 # inflatably
 
 ![Alt Text](giphy.gif)
 
-inflatably is an R package [available on
+inflatably is an example R package [available on
 GitHub](https://github.com/HealthEconomicsHackathon/inflatably).
 
 The inflatably can also be installed from GitHub:
@@ -25,7 +26,3 @@ devtools::install_github("HealthEconomicsHackathon/inflatably")
 Inflating costs to present value (PV) is a routine step in
 cost-effectiveness analyses. Further, there are different inflation
 rates depending on the type of cost to be inflated.
-
-## License
-
-MIT © Imperial College of Science, Technology and Medicine
