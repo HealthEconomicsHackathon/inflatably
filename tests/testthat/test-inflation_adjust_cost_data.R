@@ -1,5 +1,9 @@
 context("test-inflation_adjust_cost_data")
 
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("simple calcs", {
+  expect_equivalent(inflation_adjust_cost_data(2014, 2015, 1, "HCHS"), 2.7)
+  
+})
+
+test_that("errors", {
 })

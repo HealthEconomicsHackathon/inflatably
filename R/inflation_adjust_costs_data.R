@@ -18,7 +18,7 @@
 #' @param from_year Date of cost to convert from
 #' @param to_year Date to convert cost to
 #' @param from_cost Cost at \code{from_year}
-#' @param inflation_data NA default is fixed 3.5\% rate of inflation; otherwise source of data (string) \code{\link{GDP_deflators}}, \code{\link{HCHS_pay}}, \code{\link{{HCHS_price}} or \code{\link{CPI}}.
+#' @param inflation_df_nm Source of data (string) \code{\link{GDP_deflators}}, \code{\link{HCHS}}, or \code{\link{CPI}}.
 #'
 #' @return Inflated (to) cost (scalar), with attributes used to generate the return value:
 #' \itemize{
@@ -35,14 +35,14 @@
 #' from_cost <- 96.140
 #'
 # inflation_adjust_cost_data(from_year,
-#                       to_year,
-#                       from_cost)
+#                            to_year,
+#                            from_cost)
 #' 1*(1+0.035)^6
 #'
 #' inflation_adjust_cost_data(from_year = 2014,
-#'                       to_year = 2016,
-#'                       from_cost = 1,
-#'                       inflation_data = "HCHS")
+#'                            to_year = 2016,
+#'                            from_cost = 1,
+#'                            inflation_df_nm = "HCHS")
 #' 1*1.004*1.01
 #'
 inflation_adjust_cost_data <- function(from_year,
