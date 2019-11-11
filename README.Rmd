@@ -15,8 +15,10 @@ knitr::opts_chunk$set(
 #library(inflatably)
 ```
 
-[![Travis build status](https://travis-ci.com/HealthEconomicsHackathon/inflatably.svg?branch=use_travis)](https://travis-ci.com/HealthEconomicsHackathon/inflatably)
+[![codecov](https://codecov.io/gh/HealthEconomicsHackathon/inflatably/master/graph/badge.svg)](https://codecov.io/gh/HealthEconomicsHackathon/inflatably)
 [![Travis build status](https://travis-ci.org/HealthEconomicsHackathon/inflatably.svg?branch=use_travis)](https://travis-ci.org/HealthEconomicsHackathon/inflatably)
+[![codecov.io](https://codecov.io/github/HealthEconomicsHackathon/inflatably/coverage.svg?branch=master)](https://codecov.io/github/HealthEconomicsHackathon/inflatably?branch=master)
+
 # inflatably
 
 ![Alt Text](giphy.gif)
