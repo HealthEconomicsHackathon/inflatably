@@ -17,11 +17,11 @@ inflation_adjust_cost_custom <- function(from_year,
                                          from_cost,
                                          inflation_df) {
   
-  stopifnot(from_year %in% inflation_df$year)
-  stopifnot(to_year %in% inflation_df$year)
   if (from_year %% 1 != 0) stop("From date must be an integer valued whole year")
   if (to_year %% 1 != 0) stop("To date must be an integer valued whole year")
   if (from_cost < 0) stop("Cost must be non-negative")
+  if(!from_year %in% inflation_df$year) stop("from year not in look-up table")
+  if(!to_year %in% inflation_df$year) stop("to year not in look-up table")
   
   to_cost <- from_cost
   
