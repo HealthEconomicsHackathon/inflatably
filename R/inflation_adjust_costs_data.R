@@ -8,6 +8,7 @@
 #'
 #' \itemize{
 #'   \item \href{https://www.pssru.ac.uk/pub/uc/uc2017/sources-of-information.pdf}{PSSRU annual inflation hospital and community health services (HCHS)}
+#'   \item \link{CPI}
 #' }
 #'
 #' \deqn{(1 + i_{1})(1 + i_{2}) \cdots (1 + i_{n}) \times C}
@@ -18,7 +19,7 @@
 #' @param from_year Date of cost to convert from
 #' @param to_year Date to convert cost to
 #' @param from_cost Cost at \code{from_year}
-#' @param inflation_df_nm Source of data (string) \code{\link{GDP_deflators}}, \code{\link{HCHS}}, or \code{\link{CPI}}.
+#' @param inflation_df_nm Source of data (string) \code{\link{HCHS}}, or \code{\link{CPI}}.
 #'
 #' @return Inflated (to) cost (scalar), with attributes used to generate the return value:
 #' \itemize{
