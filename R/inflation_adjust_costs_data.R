@@ -51,7 +51,7 @@ inflation_adjust_cost_data <- function(from_year,
                                        from_cost,
                                        inflation_df_nm){
   
-  data_sources <- data(package = "inflately")
+  data_sources <- utils::data(package = "inflately")
   data_sources <- data_sources$results[ ,"Item"]
   
   if (!(inflation_df_nm %in% data_sources)) {
@@ -60,7 +60,7 @@ inflation_adjust_cost_data <- function(from_year,
   }
 
   # load data to workspace
-  eval(parse(text = paste0("data(", inflation_df_nm, ")")))
+  eval(parse(text = paste0("utils::data(", inflation_df_nm, ")")))
   inflation_df <- eval(parse(text = inflation_df_nm))
   
   to_cost <- 

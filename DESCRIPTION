@@ -1,14 +1,19 @@
 Package: inflately
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Inflating Costs to Present Value (PV) Using Different Source Rates
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Nathan Green <nathan.greenf@imperial.ac.uk>
+Maintainer: Nathan Green <nathan.greenf@imperial.ac.uk>
+Description: Inflating costs to present value (PV) is a routine step in
+    cost-effectiveness analyses. Further, there are different inflation
+    rates depending on the type of cost to be inflated.
+Depends:
+    R (>= 3.5.0),
+    utils
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
     testthat,
     covr
+RoxygenNote: 6.1.1

@@ -7,6 +7,8 @@
 #' @param inflation_df inflation annual rate data. dataframe of annual inflation data, in the format
 #' "year" = year (yyyy), "rate" = annual inflation rate (1/100th fraction)
 #'
+#' @export
+#' 
 #' @examples 
 #' inflation_df <- data.frame("year" = 2008:2010, "rate" = c(0.02, 0.03, 0.025))
 #' inflation_adjust_cost_custom(2008, 2009, 100, inflation_df)
