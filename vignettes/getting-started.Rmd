@@ -1,0 +1,63 @@
+---
+title: "Getting started"
+output: rmarkdown::html_vignette
+bibliography: bibliography.bib
+vignette: >
+  %\VignetteIndexEntry{getting-started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+This dcoument is the basic use of the package `inflately`.
+
+When using costs in a cost analysis (e.g. cost-effectiveness calculation)
+
+  * original cost:
+    * currency
+    * time
+    * context
+  * target cost:
+    * currency
+    * time
+  
+The original cost will come from some source which we'll need to record for future reference.
+
+See [@Turner2019]
+
+$$
+(1 + i_{1})(1 + i_{2}) \cdots (1 + i_{n}) \times C
+$$
+
+Clearly, for the same $i$ each year this is simply
+
+$$
+C(1 + i)^n
+$$
+
+
+### Example
+
+```{r setup}
+library(inflately)
+
+from_year <- 2012
+to_year <- 2015
+from_cost <- 96.140
+
+inflation_adjust_cost_data(from_year = 2014,
+                           to_year = 2016,
+                           from_cost = 1,
+                           inflation_df_nm = "HCHS")
+1*1.004*1.01
+```
+
+
+### References
