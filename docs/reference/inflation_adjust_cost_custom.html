@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Page not found (404) • inflatably</title>
+<title>Inflation adjust a cost to present value — inflation_adjust_cost_custom • inflatably</title>
 
 
 <!-- jquery -->
@@ -29,13 +29,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
 
-<meta property="og:title" content="Page not found (404)" />
+<meta property="og:title" content="Inflation adjust a cost to present value — inflation_adjust_cost_custom" />
+<meta property="og:description" content="Inflation adjust a cost to present value" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -54,7 +56,7 @@
   </head>
 
   <body>
-    <div class="container template-title-body">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -66,7 +68,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">inflatably</a>
+        <a class="navbar-link" href="../index.html">inflatably</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
@@ -74,13 +76,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -90,7 +92,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/getting-started.html">Getting started</a>
+      <a href="../articles/getting-started.html">Getting started</a>
     </li>
   </ul>
 </li>
@@ -108,17 +110,56 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Page not found (404)</h1>
+    <h1>Inflation adjust a cost to present value</h1>
+    
+    <div class="hidden name"><code>inflation_adjust_cost_custom.Rd</code></div>
     </div>
 
-Content not found. Please use links in the navbar.
+    <div class="ref-description">
+    <p>Inflation adjust a cost to present value</p>
+    </div>
+
+    <pre class="usage"><span class='fu'>inflation_adjust_cost_custom</span>(<span class='no'>from_year</span>, <span class='no'>to_year</span>, <span class='no'>from_cost</span>, <span class='no'>inflation_df</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>from_year</th>
+      <td><p>base year to inflate from</p></td>
+    </tr>
+    <tr>
+      <th>to_year</th>
+      <td><p>destination year to inflate to</p></td>
+    </tr>
+    <tr>
+      <th>from_cost</th>
+      <td><p>base year cost</p></td>
+    </tr>
+    <tr>
+      <th>inflation_df</th>
+      <td><p>inflation annual rate data. dataframe of annual inflation data, in the format
+"year" = year (yyyy), "rate" = annual inflation rate (1/100th fraction)</p></td>
+    </tr>
+    </table>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>inflation_df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='st'>"year"</span> <span class='kw'>=</span> <span class='fl'>2008</span>:<span class='fl'>2010</span>, <span class='st'>"rate"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.02</span>, <span class='fl'>0.03</span>, <span class='fl'>0.025</span>))
+<span class='fu'>inflation_adjust_cost_custom</span>(<span class='fl'>2008</span>, <span class='fl'>2009</span>, <span class='fl'>100</span>, <span class='no'>inflation_df</span>)</div><div class='output co'>#&gt; [1] 102</div><div class='input'><span class='fl'>100</span>*<span class='fl'>1.02</span> <span class='co'># 102 </span></div><div class='output co'>#&gt; [1] 102</div><div class='input'>
+</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
-
 </div>
-
 
 
       <footer>

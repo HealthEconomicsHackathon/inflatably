@@ -1,4 +1,4 @@
 library(testthat)
-library(inflately)
+library(inflatably)
 
-test_check("inflately")
+test_check("inflatably")
