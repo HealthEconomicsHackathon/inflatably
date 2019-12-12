@@ -2,8 +2,10 @@ Package: inflatably
 Type: Package
 Title: Inflating Costs to Present Value (PV) Using Different Source Rates
 Version: 0.1.0
-Author: Nathan Green <nathan.greenf@imperial.ac.uk>
-Maintainer: Nathan Green <nathan.greenf@imperial.ac.uk>
+Authors@R: person("Nathan", "Green",
+                   email = "nathan.greenf@imperial.ac.uk", role = c("aut", "cre"),
+                   comment = c("0000-0003-2745-1736")
+                  )
 Description: Inflating costs to present value (PV) is a routine step in
     cost-effectiveness analyses. Further, there are different inflation
     rates depending on the type of cost to be inflated.

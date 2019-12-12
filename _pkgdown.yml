@@ -1,0 +1,44 @@
+authors:
+  Nathan Green:
+    href: "https://nathangreen.netlify.com/"
+    
+home:
+  title: Inflate costs
+  
+navbar:
+  components:
+
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Getting started
+        href: articles/getting-started.html
+    news:
+      text: News
+      href: news/index.html
+
+reference:
+- title: All functions
+  desc: ~
+  contents:
+  - '`CPI`'
+  - '`HCHS`'
+  - '`inflation_adjust_cost_custom`'
+  - '`inflation_adjust_cost_data`'
