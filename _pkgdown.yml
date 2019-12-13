@@ -34,10 +34,13 @@ navbar:
       href: news/index.html
 
 reference:
-- title: All functions
+- title: Functions
+  desc: ~
+  contents:
+  - '`inflation_adjust_cost_custom`'
+  - '`inflation_adjust_cost_data`'
+- title: Data
   desc: ~
   contents:
   - '`CPI`'
   - '`HCHS`'
-  - '`inflation_adjust_cost_custom`'
-  - '`inflation_adjust_cost_data`'
